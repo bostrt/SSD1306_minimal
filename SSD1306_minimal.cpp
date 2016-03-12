@@ -1,6 +1,3 @@
-#include <TinyWireM.h>
-#include <USI_TWI_Master.h>
-
 /*
   SSD1306_minimal.cpp - SSD1306 OLED Driver Library
   
@@ -31,6 +28,8 @@
 	All text above must be included in any redistribution.
 */
 
+#include <TinyWireM.h>
+#include <USI_TWI_Master.h>
 #include "SSD1306_minimal.h"
 
 // a 5x7 font table
@@ -406,43 +405,7 @@ void SSD1306_Mini::clipArea(unsigned char col, unsigned char row, unsigned char 
 
 void SSD1306_Mini::cursorTo(unsigned char col, unsigned char row){
   clipArea(col, row, 128-col, 8-row);
-/*  
-  Wire.begin();                    //initialize I2C
-  Wire.beginTransmission(SlaveAddress); // begin I2C transmission
-  Wire.send(GOFi2cOLED_Command_Mode);            // data mode
-  Wire.send(Set_Column_Address_Cmd);
-  Wire.send(0);
-
-  Wire.send(col);
-  Wire.send(127);
-
-  Wire.endTransmission();                    // stop I2C transmission
-
-  Wire.begin();                    //initialize I2C
-  Wire.beginTransmission(SlaveAddress); // begin I2C transmission
-  Wire.send(GOFi2cOLED_Command_Mode);            // data mode
-  Wire.send(Set_Page_Address_Cmd);
-  Wire.send(0);
-
-  Wire.send(row); 
-  Wire.send(7);
-
-  Wire.endTransmission();                    // stop I2C transmission
-*/
 }
-
-/*
-void SSD1306_Mini::cursorToX( unsigned char row, unsigned char col ){
-
-  sendCommand(0x00 | (0x0F & col) );  // low col = 0
-  sendCommand(0x10 | (0x0F & (col>>4)) );  // hi col = 0
-//  sendCommand(0x40 | (0x0F & row) ); // line #0
-
-  sendCommand(0xb0 | (0x03 & row) );  // hi col = 0
-  
-  
-}
-*/
 
 void SSD1306_Mini::startScreen(){
   

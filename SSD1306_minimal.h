@@ -1,7 +1,3 @@
-#include <TinyWireM.h>
-#include <USI_TWI_Master.h>
-
-
 /*
   SSD1306_minimal.h - SSD1306 OLED Driver Library
   
@@ -37,6 +33,8 @@
 #define __SSD1306_MINIMAL_H__
 
 #include <Arduino.h>
+#include <TinyWireM.h>
+#include <USI_TWI_Master.h>
 
 // config
 #define SlaveAddress 0x3c
@@ -52,10 +50,10 @@
 #define Set_Contrast_Cmd                      0x81     //Double byte command to select 1 out of 256 contrast steps.Default(RESET = 0x7F)
 #define Entire_Display_On_Resume_Cmd          0xA4     //Resume to RAM content display(RESET), Output follows RAM content
 #define Entire_Display_On_Cmd                 0xA5     //Entire display ON, Output ignores RAM content
-#define GOFi2cOLED_Normal_Display_Cmd	      0xA6     //Normal display (RESET)
+#define GOFi2cOLED_Normal_Display_Cmd	        0xA6     //Normal display (RESET)
 #define GOFi2cOLED_Inverse_Display_Cmd	      0xA7     //Inverse display
-#define GOFi2cOLED_Display_Off_Cmd	      0xAE     //sleep mode(RESET)
-#define GOFi2cOLED_Display_On_Cmd	      0xAF     //normal mode
+#define GOFi2cOLED_Display_Off_Cmd	          0xAE     //sleep mode(RESET)
+#define GOFi2cOLED_Display_On_Cmd	            0xAF     //normal mode
 
 //Scrolling Command (more than one bytes command pleaserefer to SSD1306 datasheet for details)
 #define Right_Horizontal_Scroll_Cmd           0x26
@@ -68,9 +66,9 @@
 
 //Addressing Setting Command (more than one bytes command pleaserefer to SSD1306 datasheet for details)
 #define Set_Memory_Addressing_Mode_Cmd        0x20
-#define HORIZONTAL_MODE			      0x00
-#define VERTICAL_MODE			      0x01
-#define PAGE_MODE			      0x02       //Default(reset)
+#define HORIZONTAL_MODE			                  0x00
+#define VERTICAL_MODE			                    0x01
+#define PAGE_MODE			                        0x02       //Default(reset)
 #define Set_Column_Address_Cmd                0x21       //Setup column start and end address. This command is only for horizontal or vertical addressing mode.
 #define Set_Page_Address_Cmd                  0x22       //Setup page start and end address. This command is only for horizontal or vertical addressing mode.
 
@@ -89,12 +87,12 @@
 #define Set_VCOMH_Deselect_Level_Cmd          0xDB
 #define No_Operation_Cmd                      0xE3
 
-#define Charge_Pump_Setting_Cmd      	      0x8D
+#define Charge_Pump_Setting_Cmd      	        0x8D
 #define Charge_Pump_Enable_Cmd	              0x14
 #define Charge_Pump_Disable_Cmd               0x10     //default
 
-#define Scroll_Left			      0x00
-#define Scroll_Right			      0x01
+#define Scroll_Left			         0x00
+#define Scroll_Right			       0x01
 
 #define Scroll_2Frames			      0x7
 #define Scroll_3Frames			      0x4
@@ -132,7 +130,7 @@ class SSD1306_Mini {
     
     // print a single character
     void printChar( char ch );
-    
+
     // print a string to the screen
     void printString( char * pText );
     
