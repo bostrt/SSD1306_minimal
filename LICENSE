@@ -2,7 +2,10 @@ This license agreement is as correct as I believe it can be. I have kept the adv
 as it states the text must be included when redistributed.
 
 
-GOFi2cOLED Library is - 2012 Copyright (c) GOF Electronics Co. Ltd ( http://www.geekonfire.com )
+  Copyright (c) 2012, Adafruit Industries. All rights reserved.
+  Copyright (c) 2012 GOF Electronics Co. Ltd ( http://www.geekonfire.com )
+  Copyright (c) 2015 CoPiino Electronics All right reserved.
+  Copyright (c) 2016 Kirk Northrop (github.com/kirknorthrop)
 
   Original Author: Limor Fried/Ladyada Adafruit Industries
   Modified by: Jimbo.we (www.geekonfire.com)
@@ -21,7 +24,6 @@ GOFi2cOLED Library is - 2012 Copyright (c) GOF Electronics Co. Ltd ( http://www.
 
   Modified by: Kirk Northrop (github.com/kirknorthrop)
 
-  This library is derived from Adafruit_GFX library, only for SSD1306 in I2C Mode.
   It is a free software; you can redistribute it and/or modify it
   under the terms of BSD license, check LICENSE for more information.
   All text above must be included in any redistribution.
@@ -29,8 +31,10 @@ GOFi2cOLED Library is - 2012 Copyright (c) GOF Electronics Co. Ltd ( http://www.
 
 Software License Agreement (BSD License)
 
-Copyright (c) 2012, Adafruit Industries
-All rights reserved.
+  Copyright (c) 2012, Adafruit Industries. All rights reserved.
+  Copyright (c) 2012 GOF Electronics Co. Ltd ( http://www.geekonfire.com )
+  Copyright (c) 2015 CoPiino Electronics All right reserved.
+  Copyright (c) 2016 Kirk Northrop (github.com/kirknorthrop)
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
